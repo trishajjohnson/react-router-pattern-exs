@@ -9,12 +9,12 @@ test('/dogs route', () => {
     <App />
   </MemoryRouter>
   ));
-    console.log(response);
+
   expect(getByText("All Dogs")).toBeInTheDocument();
 });
 
 test('Navbar links', () => {
-  const { getByText } = render((
+  const { getByText, getByTestId } = render((
   <MemoryRouter initialEntries={["/dogs"]}>
     <App />
   </MemoryRouter>
@@ -22,9 +22,25 @@ test('Navbar links', () => {
 
   expect(getByText("All Dogs")).toBeInTheDocument();
   
-  const link = getByText('Perry');
+  const link = getByTestId('Perry');
   fireEvent.click(link);
 
-  expect(getByText("Perry")).toBeInTheDocument();
+  expect(getByTestId("DogDetails-header-Perry")).toBeInTheDocument();
+
+});
+
+test('Navbar links', () => {
+  const { getByText, getByTestId } = render((
+  <MemoryRouter initialEntries={["/dogs"]}>
+    <App />
+  </MemoryRouter>
+  ));
+
+  expect(getByText("All Dogs")).toBeInTheDocument();
+  
+  const link = getByTestId('Whiskey');
+  fireEvent.click(link);
+
+  expect(getByTestId("DogDetails-header-Whiskey")).toBeInTheDocument();
 
 });

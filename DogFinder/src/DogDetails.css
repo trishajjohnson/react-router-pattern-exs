@@ -1,3 +1,7 @@
 .DogDetails-img {
     width: 200px;
 }
+
+.facts {
+    list-style-type: none;
+}

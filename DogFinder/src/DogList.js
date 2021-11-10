@@ -4,7 +4,7 @@ const DogList = ({dogs}) => {
 
     let dogLinks = dogs.map(dog => (
         <h2>
-            <Link id={dog.name} to={`/dogs/${dog.name.toLowerCase()}`} >
+            <Link data-testid={ dog.name } to={`/dogs/${dog.name.toLowerCase()}`} >
                 {dog.name}
             </Link>
         </h2>

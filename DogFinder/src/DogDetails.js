@@ -7,17 +7,17 @@ const DogDetails = ({dogs}) => {
     
     if(!dog[0]) return <Redirect to="/dogs" />
 
-    const facts = dog[0].facts.map(fact => (
-        <p>{fact}</p>
-    ));
-
     return (
         <div>
-            <h1>{dog[0].name}</h1>
+            <h1 data-testid={`DogDetails-header-${dog[0].name}`}>{dog[0].name}</h1>
             <img className="DogDetails-img" src={dog[0].src} alt={dog[0].name.toLowerCase()} />
             <p><b>Age</b>: {dog[0].age}</p>
-            <p><b>Facts</b></p>
-            <p>{facts}</p>
+            <p><b>FACTS</b></p>
+            <ul className="facts">
+              {dog[0].facts.map(fact => (
+                  <li>{fact}</li>
+              ))}  
+            </ul>
             <Link to={`/dogs`} >Back to All Dogs</Link> 
         </div>
     );
