@@ -1,0 +1,18 @@
+.Navbar {
+    height: 150px;
+    background-color: black;
+    color: white;
+}
+
+.Navbar-header {
+    margin: 0;
+    padding: 10px;
+}
+
+.Navbar-link a {
+    padding: 5px;
+    font-size: 30px; 
+    /* text-decoration: none;  */
+    color: white;
+}
+

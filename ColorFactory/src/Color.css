@@ -1,0 +1,21 @@
+.Color {
+    text-align: center;
+    height: 100vh;
+}
+
+.Color-heading {
+    margin: auto;
+    color: white;
+    font-size: 200px;
+}
+
+.back-link {
+    padding: 100px;
+}
+
+.link {
+    color: white;
+    opacity: 0.3;
+    font-size: 30px;
+
+}
