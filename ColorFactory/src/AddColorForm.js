@@ -9,8 +9,7 @@ const AddColorForm = ({addColor}) => {
     const handleChange = e => {   
         setForm(fdata => ({...fdata, [e.target.name]: e.target.value}));
     }
-    console.log("color hex", form.hex);
-
+    console.log("form", form);
     function handleSubmit(e) {
         e.preventDefault();
         addColor({[form.color]: form.hex});

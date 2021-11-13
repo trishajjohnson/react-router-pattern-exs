@@ -28,7 +28,7 @@ const Routes = () => {
     return (
         <Switch>
             <Route exact path="/colors"><ColorsList colors={colors} /></Route>
-            <Route exact path="/colors/add"><AddColorForm addColor={handleAddColor} /></Route>
+            <Route exact path="/colors/new"><AddColorForm addColor={handleAddColor} /></Route>
             <Route exact path="/colors/:color" ><Color /></Route>
             <Redirect to="/colors" />
         </Switch>

@@ -12,7 +12,7 @@ const ColorsList = ({colors}) => {
         <div className="ColorsList">
             <div className="ColorsList-container-1">
                 <h1 className="ColorsList-header">Color Factory</h1>
-                <Link className="link-light" to={"/colors/add"}>Add a Color</Link>
+                <Link className="link-light" to={"/colors/new"}>Add a Color</Link>
             </div>
             <div className="ColorsList-container-2">
                 <h2>Choose a Color</h2>
